@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import backImg from "./images/illustration-box-desktop.svg";
+import Grid from "@material-ui/core/Grid";
+import Accordion from "./Accordion";
+import mobileWomanImg from "./images/illustration-woman-online-mobile.svg";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container justify="center">
+      <Grid item md={8} xs={12}>
+        <div className="box">
+          <img className="box-img" src={backImg} />
+          <img className="mobile-woman-img" src={mobileWomanImg} />
+          <div className="app">
+            <div style={{ marginTop: "60px" }}>
+              <h1 style={{ textAlign: "right", marginRight: "418px" }}>FAQ</h1>
+              <Accordion className="accordion" />
+            </div>
+          </div>
+        </div>
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export default App;

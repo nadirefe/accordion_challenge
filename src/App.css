@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap");
+
+body {
+  background: linear-gradient(-180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100vh;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: Kumbh Sans, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: white !important;
+  height: 500px;
+  border-radius: 25px;
+  margin-top: 130px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.box-img {
+  position: absolute;
+  top: 365px;
+  left: 116px;
+}
+
+@media screen and (min-width: 700px) {
+  .app {
+    background: url("./images/illustration-woman-online-desktop.svg") right 39vw
+        bottom 8vh no-repeat,
+      url("./images/bg-pattern-desktop.svg") left -41vw top -37vh no-repeat;
+  }
+  .mobile-back-img {
+    display: none;
+  }
+  .mobile-woman-img {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 700px) {
+  .app {
+    background: url("./images/bg-pattern-mobile.svg") no-repeat;
+    background-position: right 26vw bottom 83vh;
   }
-  to {
-    transform: rotate(360deg);
+  .mobile-woman-img {
+    position: absolute;
+    right: 170px;
+    bottom: 230px;
+  }
+  .box-img {
+    display: none;
+  }
+  .app h1 {
+    margin-left: 145px;
+    margin-top: 100px;
   }
 }

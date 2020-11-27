@@ -1,0 +1,18 @@
+.accordion:hover {
+  color: orange;
+}
+
+.accordion-icon {
+  color: orange;
+}
+
+@media screen and (max-width: 700px) {
+  .accordion {
+    width: 500px;
+    position: relative;
+    right: 150px;
+  }
+  .app {
+    overflow: auto;
+  }
+}
